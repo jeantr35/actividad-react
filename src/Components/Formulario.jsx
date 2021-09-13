@@ -13,21 +13,15 @@ const Formulario = () => {
     const {register,handleSubmit, formState: { errors }} = useForm();
 
     const onsubmit = (data, e) =>{
-        setName(data.name)
+        setFields(data)
         e.target.reset()
     }
 
-    const setName = (name) => {
+    const setFields = (data) => {
         setUser({
             ...user,
-            ["name"]: name
-        })
-    }
-
-    const setAge = (age) => {
-        setUser({
-            ...user,
-            ["age"]: age
+            ["name"]: data.name,
+            ["age"]: data.age
         })
     }
 
@@ -48,6 +42,20 @@ const Formulario = () => {
             />
             <span className="text-danger text-small d-block mb-2">
                 {errors.name &&  errors.name.message}
+            </span>
+            <input
+                type="number"
+                className="form-control my-2"
+                name="age"
+                {...register("age", { 
+                    required:{
+                        value: true,
+                        message: 'age required' 
+                    }
+                })}   
+            />
+            <span className="text-danger text-small d-block mb-2">
+                {errors.age &&  errors.age.message}
             </span>
             <button className="btn btn-primary" >Send</button>
         </form>
