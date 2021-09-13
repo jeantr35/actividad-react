@@ -1,37 +1,50 @@
 import React, { Fragment, useState } from 'react'
 import { useForm } from "react-hook-form";
+import Attitudes from "./Attitudes";
+
 
 const Age = (props) => {
 
     const [categoria, setcategoria] = useState("")
 
-    const categorizar = () => {
-        if(props.age <= 12 && props.age >= 0){
-            return "Nino"
+    
+        if (props.age <= 12 && props.age >= 0) {
+            if(categoria != "Nino"){setcategoria("Nino")}
+            
         }
-        else if(props.age <= 30 && props.age >= 0){
-            return "Joven"
+        else if (props.age <= 30 && props.age >= 0) {
+            if(categoria != "Joven"){setcategoria("Joven")}
+            
         }
-        else if(props.age <= 50 && props.age >= 0){
-            return "Adulto"
+        else if (props.age <= 50 && props.age >= 0) {
+            if(categoria != "Adulto"){setcategoria("Adulto")}
+            
         }
-        else if(props.age > 50 && props.age >= 0){
-            return "Mayor"
+        else if (props.age > 50 && props.age >= 0) {
+            if(categoria != "Mayor"){setcategoria("Mayor")}
+            
         }
-        else{
-            return "No definido"
+        else {
+            if (categoria != "No definido") {
+                setcategoria( "No definido")
+            }
         }
-    }
+    
 
 
+    return (
 
-    return ( 
-        
         <Fragment>
-            <h5>Usted esta categorizado como: {categorizar()}</h5>
+            <div className="category">
+               
+                <h5 >Usted esta categorizado como: {categoria}</h5>
+            </div>
+            <div className="attitudes">
+                <Attitudes category={categoria}/>
+            </div>
         </Fragment>
 
-     );
+    );
 }
- 
+
 export default Age;

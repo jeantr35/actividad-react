@@ -27,7 +27,6 @@ const Formulario = () => {
   }
 
 
-  const [registered, setRegistered] = useState(false);
 
   return (
     <Fragment>
