@@ -1,12 +1,13 @@
 import React, { Fragment, useState } from "react";
 import { useForm } from "react-hook-form";
 import '../Styles/FormStyle.css'
+import Age from "./Age";
 
 const Formulario = () => {
 
   const [user, setUser] = useState({
     name: '',
-    age: 0,
+    age: -1,
     occupation: ''
   });
 
@@ -54,8 +55,9 @@ const Formulario = () => {
           <button type="submit" className="btn btn-primary">
             Enviar
           </button>
+        
+        <Age age={user.age}/>
 
-     
       </form>
     </Fragment>
   );
