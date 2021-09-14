@@ -30,7 +30,7 @@ const Age = (props) => {
             }
         }
     
-
+    props.user.category = categoria
 
     return (
 

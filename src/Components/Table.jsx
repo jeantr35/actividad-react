@@ -1,3 +1,4 @@
+import userEvent from '@testing-library/user-event'
 import React, { Fragment } from 'react'
 
 function Table(props) {
@@ -8,14 +9,24 @@ function Table(props) {
                     <tr>
                         <th>Nombre</th>
                         <th>Edad</th>
-                        <th>Clasificación edad</th>
-                        <th>Ocupación</th>
+                        <th>Ocupacion</th>
+                        <th>Categoria</th>
+                        <th>Valores</th>
                     </tr>
                 </thead>
                 <tbody>
-                   <tr>
-                       <th></th>
-                   </tr>
+                   {
+                       props.users.length > 0 ?
+                       props.users.map((user) => (
+                       <tr>
+                           <td>{user.name}</td>
+                           <td>{user.age}</td>
+                           <td>{user.occupation}</td>
+                           <td>{user.category}</td>
+                           <td>{user.attitudes}</td>
+                        </tr>
+                           )) : (<tr>No hay usuario</tr>)
+                   }
                 </tbody>
             </table>
         </Fragment >
