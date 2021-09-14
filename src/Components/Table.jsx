@@ -25,7 +25,7 @@ function Table(props) {
                            <td>{user.category}</td>
                            <td>{user.attitudes}</td>
                         </tr>
-                           )) : (<tr>No hay usuario</tr>)
+                           )) : (<tr>No se ha guardado ningún usuario</tr>)
                    }
                 </tbody>
             </table>

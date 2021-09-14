@@ -46,15 +46,15 @@ const Formulario = ({ setData }) => {
 
   return (
     <Fragment>
-      <form className="form-data" onSubmit={handleSubmit(SendData)}>
-
+      <form className="formData" onSubmit={handleSubmit(SendData)}>
+        <h1>Prueba React</h1>
         <input onChange={handleInputChange}
           type="text"
           name="name"
           className="form-control my-2"
           placeholder="Ingrese su nombre"
         />
-        <input onChange={handleInputChange}
+        <input  onChange={handleInputChange}
           type="number"
           name="age"
           className="form-control my-2"
@@ -62,13 +62,13 @@ const Formulario = ({ setData }) => {
         />
         <select name="occupation" onChange={handleInputChange}>
           <option value="choose">--Seleccione la profesion--</option>
-          <option value="student">Estudiante</option>
-          <option value="employee">Empleado</option>
-          <option value="retired">Jubilado</option>
+          <option value="Estudiante">Estudiante</option>
+          <option value="Empleado">Empleado</option>
+          <option value="Jubilado">Jubilado</option>
         </select>
 
         <button type="submit" className="btn btn-primary">
-          Enviar
+          Guardar
         </button>
           <Age age={user.age} user={user} />
       </form>

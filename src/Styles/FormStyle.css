@@ -1,4 +1,4 @@
-.form-data{
+.formData{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -7,16 +7,21 @@
     
 
 }
-input{
-    margin: 25px 40px 0px 
+input, select, button{
+    margin: 25px 40px 0px;
+    border: 1px solid #393939;
+    border-radius: 5px 5px 5px 5px;
+    color: #393939;
+    font-size: 12px;
+    padding: 5px;
 }
 
 select{
-    margin: 25px 40px 0px 
+    margin: 25px 40px 0px;
 
 }
 
 button{
-    margin: 25px 40px 0px 
-
+    margin: 25px 40px 0px;
+    
 }
