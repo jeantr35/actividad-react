@@ -1,4 +1,5 @@
 import React from 'react'
+import Table from './Table'
 
 function attitudes(props) {
 
@@ -27,6 +28,7 @@ function attitudes(props) {
     return (
         <div>
             <h5>{selectAttitudes()}</h5>
+            <Table user= {props.user} category = {props.category} />
         </div>
     )
 }

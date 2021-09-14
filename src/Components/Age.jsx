@@ -40,7 +40,7 @@ const Age = (props) => {
                 <h5 >Usted esta categorizado como: {categoria}</h5>
             </div>
             <div className="attitudes">
-                <Attitudes category={categoria}/>
+                <Attitudes user={props.user} category={categoria}/>
             </div>
         </Fragment>
 
